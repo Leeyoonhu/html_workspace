@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <a href="http://www.google.com" target="_self">방문1</a><br>    
+    <a href="http://www.google.com" target="_blank">방문2</a> -->
+
+    <!-- <a href="./images/conan.jpg">파일 다운로드</a> -->
+    <!-- <a href="http://127.0.0.1:5500/HTML_0826/images/conan.jpg">파일 다운로드</a>-->
+    <!-- 범인은 코난
+    <img src="./images/rose.jpg" width="1000" height="1000" alt="장미"> -->
+
+    <!-- <table border="1">
+        <tr>
+            <th>아이디</th>
+            <th>이름</th>
+            <th>소속</th>
+        </tr>
+        <tr>
+            <td>conan</td>
+            <td>코난</td>
+            <td rowspan="2">청솔초등학교</td>
+            <!-- 1행에서 rowspan =2 ==> 1~2행의 3번째 열값을 "청솔초등학교" 로 병합 -->
+    <!-- </tr>
+        <tr>
+            <td>rose</td>
+            <td>장미</td>
+        </tr>
+        <tr>
+            <td colspan="3">열병합</td>
+            <!-- 4행에서 colspan =3 ==> 1~3열의 값을 "열병합"으로 병합 > -->
+    <!-- </tr>
+    </table> -->
+
+    <!-- <table border="1">
+        <tr>
+            <td width="50%">
+                <ul>
+                    <li>리스트1</li>
+                    <li>리스트2</li>
+                </ul>
+            </td>
+            <td>
+                <ol>
+                    <li>리스트3</li>
+                    <li>리스트4</li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>어떤 요소든 OK</p>
+            </td>
+            <td><img border="0" src="./images/conan.jpg" width="100" alt="코난"></td>
+        </tr>
+    </table> -->
+
+    <table border="1">
+        <caption>테이블 이름</caption>
+        <colgroup>
+            <col span="2" style="background-color: red;">
+            <col style="background-color: blue;">
+        </colgroup>
+        <thead style="background-color: greenyellow;">
+            <tr>
+                <th>1번열</th>
+                <th>2번열</th>
+                <th>3번열</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+        <tfoot style="background-color: rgb(228, 228, 82);">
+            <tr>
+                <td>data1</td>
+                <td>data2</td>
+                <td>data3</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+</body>
+
+</html>
+
+<!-- 
+    
+# 경로(target)
+절대 경로 => href="https://sports.news.naver.com/" 주소창 그대로 이동
+상대 경로 => href="../general/index.nhn" 현재 문서의 위치에 따라서 이동 
+경로에는 다른 태그도 가능함
+
+# _self => 현재 탭에서 열림
+# _blank => 새로운 탭이 열림 
+* 위의 예시는 둘다 절대경로
+
+ex02.html에서 images에 있는 conan.jpg를 다운로드 하게하고 싶다
+# 다운로드 링크
+같은 디렉토리는 ./ , 하위 디렉토리는 / , 상위 디렉토리는 ../    ==> 상대 경로
+프로토콜://아이피주소:포트번호/.jpg의 경로      ==> 절대 경로
+
+
+# 이미지 => 웹문서 가운데에 이미지를 배치하고 싶은경우
+<img src = "이미지 경로" width = "가로넓이" height = "세로넓이"> 
+이미지 경로에 해당 이미지가 없을 경우 엑박 출력
+<img border="1" src="./images/rose.jpg" width="300" height="300" alt="장미">
+border ==> 테두리 두께
+alt ==> 이미지가 표시되지 못하는 경우 출력되는 텍스트
+
+
+# 테이블 => 테이블 형식
+<table border ="1"> // 테이블 형식 사용, 테두리 두께 1
+<caption></caption> = 테이블 이름
+<thead> / <tbody> / <tfoot> = 테이블의 머리 / 테이블의 몸체 / 테이블 발
+<th> = table head // 테이블 헤더 정의(중앙정렬, 볼드체 = 두꺼운 글씨체)
+<tr> = table row // 테이블 행 
+<td> = table column // 테이블 열
+<span> = 병합 // td rowspan,td colspan // 행병합, 열병합
+<colgroup> = 테이블 색상
+-->

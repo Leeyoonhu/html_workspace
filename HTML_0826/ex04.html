@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="input.html" method="get">
+        <input type="text" name="input">
+        <input type="button" value="눌러봐" name="btn1">
+        <input type="submit">
+    </form>
+
+    <form>
+        이름:<input type="text" name="name"><br>
+        학번:<input type="text" name="number" size="10">
+    </form>
+
+    <form>
+        패스워드:<input type="password" name="pwd">
+    </form>
+
+    <form>
+        성별:
+        <input type="radio" name="gender" value="male">남성
+        <input type="radio" name="gender" value="female">여성
+    </form>
+
+    <form>
+        과일 선택:
+        <input type="checkbox" name="fruits" value="apple" checked>사과
+        <input type="checkbox" name="fruits" value="grape">포도
+        <input type="checkbox" name="fruits" value="orange">오렌지
+    </form>
+
+    <form name="input" action="login.html">
+        <input type="text" name="user"><br>
+        <input type="submit" value="제출">
+        <input type="reset" value="초기화">
+    </form>
+
+    <form name="input" action="aaa.html">
+        가격:<input type="text" name="price"><br>
+        수량:<input type="text" name="quantity"><br>
+        <input type="button" value="계산" onclick="alert('10000원임')"><br>
+    </form>
+
+    <form name="input" action="getfeedback.html">
+        의견<br>
+        <textarea name="freedback" rows="3" cols="30"></textarea>
+    </form>
+
+    <form name="input" action="getfeedback.html">
+        <select name="food">
+            <option value="korean" selected>한식</option>
+            <option value="chinese">중식</option>
+            <option value="western">양식</option>
+        </select>
+    </form>
+
+    <form name="input" action="getfeedback.html">
+        <fieldset>
+            <legend>인적사항 입력</legend>
+            이름:<input type="text"><br>
+            전화번호:<input type="text"><br>
+            주소:<input type="text">
+        </fieldset>
+    </form>
+
+    <form name="input" action="">
+        <label for="male">남성</label>
+        <input type="radio" name="gender" id="male" value="male"><br>
+        <label for="female">여성</label>
+        <input type="radio" name="gender" id="female" value="female"><br>
+        <input type="submit" value="제출">
+    </form>
+
+    <form enctype="multipart/form-data" action="">
+        <input type="file" accept="image/jpg, image/gif">
+    </form>
+
+    <form name="input">
+        <input type="hidden" name="aaa" value="bbb">
+        <input type="submit" value="제출">
+    </form>
+
+</body>
+
+</html>
+
+
+<!-- 
+
+# HTML 입력 양식
+ex) google.com 들어가면 검색 할수있는 입력 양식(form)이있음
+- 기본적으로 form tag 내부에 input이 있음
+- input type을 text로 하면 data를 입력 받을수 있는 form
+- input type을 submit 으로 하면 data를 보내주는 버튼
+- 입력받은 데이터를 처리하는 서버 스크립트 => form action="처리경로"
+- 주소창에 사용자가 입력한 내용이 보이는 방식이 form method="get" // default값이 method="get"임
+ex) 주소창에 abcd입력 => localhost:5500/파일경로?input= 작성한 내용 
+
+
+# 입력 요소 (다 form안에 있음) // input - textarea - select&option - fieldset&legend - label
+1. input : type>> text, button, image, submit, password, radio, checkbox...
+input type = "password"~
+password => 마스킹처리(암호화)
+
+input type = "radio" name = "" value = ""
+radio => 둘 중 하나 선택 value는 화면에 보여주는 값
+value는 다르게, name은 같게해야 사용 가능// radio는 값 1개만 선택
+
+input type = "checkbox" name = "" value = ""
+checkbox => 여러개 선택 가능
+
+input type = "submit" or "reset" 
+submit => 제출 // reset => 초기화
+
+input type = "button" value ="버튼이름" onclick ="클릭시 할것"
+
+input type = "file" accept ="" // 파일 업로드
+
+2. textarea name ="이름" rows = "행 갯수" cols ="열 갯수"
+
+3. <select> <option>...</option> </select>
+=> 선택 가능 목록 만드는 select // 목록 리스트에 들어가는 option
+
+4. <fieldset><legend></legend></fieldset> 
+=> 테두리 만들어주는게 fieldset // 거기에 이름 붙이는게 legend
+
+5. label 
+=> radio와 쌍으로 눌리는 label // label for = radio id
+
+6. hidden : 클라이언트 측 화면에는 보이지 않음
+=> input type ="hidden" name ="키" value="서버에 전달될 내용"
+=> 키에 밸류값 저장, input type sumbit으로 제출 시, 서버측으로 키=밸류 값이 전송됨
+
+# GET 방식 vs POST 방식
+- get : URL 주소뒤에 patameter를 붙여서 데이터 전달
+- 글자수 제한(2048), 비밀보장x
+- 뒤로가기 가능
+
+- post : HTTP request 헤더에 포함시켜 전송
+- 길이제한x, 비밀보장o
+- 뒤로가기 버튼을 누를 시 데이터를 다시 보내주어야 함
+
+
+
+
+
+
+
+
+
+ -->

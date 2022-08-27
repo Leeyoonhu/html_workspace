@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <h1>회원 가입 화면</h1>
+        이름: <input type="text"><br>
+        주소: <input type="text"><br>
+        email: <input type="email"><br>
+        성별:<br>
+        <input type="radio" name="gender" value="남성" id="male">
+        <label for="male">남성</label><br>
+        <input type="radio" name="gender" value="여성" id="female">
+        <label for="female">여성</label><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset"><br>
+        <fieldset>
+            <legend>신상정보</legend>
+            1.이름 <input type="text">
+            2.이메일 <input type="email">
+            3. <input type="tel" required pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}">
+        </fieldset>
+    </form>
+</body>
+
+</html>
