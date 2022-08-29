@@ -1,0 +1,66 @@
+<!-- input[type=text] 로 폼 요소에 스타일 입히기 -->
+<!-- 입력되는 텍스트나 테두리 등 꾸밀 수 있음 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 추가</title>
+    <style>
+        input[type=text] {
+            /* <input type="text">창에만 적용 */
+            color: red;
+        }
+
+        input:hover,
+        textarea:hover {
+            /* 입력란 및 텍스트란에 마우스 올릴 때 */
+            background: aliceblue;
+        }
+
+        input[type=text]:focus,
+        input[type=email]:focus {
+            /* 텍스트나 이메일 입력란에 focus 받을 때 폰트 사이즈업*/
+            font-size: 120%;
+        }
+
+        label {
+            display: block;
+            /* 블럭 형식으로 변경 */
+            padding: 5px;
+        }
+
+        label span {
+            display: inline;
+            /* lagel내의 span에선 인라인 형식으로 변경 */
+            width: 90px;
+            text-align: right;
+            /* 우측 정렬 */
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <label>
+        <span>Name</span>
+        <input type="text" placeholder="Elvis">
+        <!-- 텍스트 입력란에 Elvis 기본 기입 -->
+    </label>
+    <label>
+        <span>Email</span>
+        <input type="email" placeholder="elvis@graceland.com">
+        <!-- 이메일 입력란에 기본 elivs@graceland.com 기입 -->
+    </label>
+    <label>
+        <span>Comment</span>
+        <textarea placeholder="메세지를 남겨주세요"></textarea>
+    </label>
+    <label>
+        <span></span><input type="submit" value="제출">
+    </label>
+</body>
+
+</html>
